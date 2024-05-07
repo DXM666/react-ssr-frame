@@ -1,0 +1,44 @@
+{
+  "name": "react-ssr-frame-core",
+  "version": "1.0.0",
+  "description": "react-ssr框架核心库",
+  "main": "dist/react-ssr-frame-core.cjs",
+  "module": "dist/react-ssr-frame-core.mjs",
+  "browser": "dist/react-ssr-frame-core.umd.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "core",
+    "react-ssr",
+    "react",
+    "ssr"
+  ],
+  "author": "DXM",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^10.3.8",
+    "@nestjs/core": "^10.3.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.8",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "rollup": "^4.17.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}

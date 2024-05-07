@@ -1,0 +1,17 @@
+{
+  "include": ["src"],
+  "paths": {
+    "src": ["src", "src/*", "src/*/*"]
+  },
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es5",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useUnknownInCatchVariables": false
+  }
+}
