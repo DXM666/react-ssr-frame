@@ -1,0 +1,42 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "react-ssr框架cli",
+  "main": "dist/react-ssr-frame-cli.cjs",
+  "module": "dist/react-ssr-frame-cli.mjs",
+  "browser": "dist/react-ssr-frame-cli.umd.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "bin": {
+    "react-ssr": "./cjs/cli.js"
+  },
+  "scripts": {
+    "build": "concurrently \"tsc -p ./tsconfig.cjs.json \" \" tsc -p ./tsconfig.esm.json\"",
+    "watch": "concurrently \"tsc -w -p ./tsconfig.cjs.json \" \"tsc -w -p ./tsconfig.esm.json \""
+  },
+  "keywords": [
+    "core",
+    "react-ssr",
+    "react",
+    "ssr"
+  ],
+  "author": "DXM",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.8",
+    "@types/yargs": "^17.0.32",
+    "concurrently": "^8.2.2",
+    "rollup": "^4.17.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}

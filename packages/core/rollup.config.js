@@ -27,7 +27,6 @@ export default {
       preferBuiltins: true,
     }),
     typescript({ tsconfig: "./tsconfig.json" }),
-
     commonjs({
       include: "node_modules/**",
     }),

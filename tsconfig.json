@@ -1,9 +1,24 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "module": "CommonJS",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
-  },
-  "exclude": ["node_modules"]
+    "sourceMap": true,
+    "declarationMap": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "stripInternal": true,
+    "pretty": true,
+    "declaration": true,
+    "strict": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2020", "DOM"],
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./@types",
+      "./node_modules/@types"
+    ]
+  }
 }
