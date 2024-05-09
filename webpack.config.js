@@ -1,10 +1,12 @@
 const path = require("path");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -36,6 +38,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new WebpackManifestPlugin({
+      fileName: "manifest.json",
+    }),
+  ],
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
