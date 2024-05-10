@@ -33,7 +33,6 @@ yargs
     async (argv) => {
       const gulpProcess = spawn(
         "npx gulp",
-
         {
           stdio: "inherit", // 这将使子进程的stdio继承自父进程，这样您可以在控制台中看到输出
           shell: true, // 在某些系统中，可能需要启用shell来正确地解析命令和参数
