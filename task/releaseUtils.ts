@@ -1,7 +1,7 @@
 /**
  * modified from https://github.com/vuejs/core/blob/master/scripts/release.js
  */
-import * as colors from "picocolors";
+import {Chalk} from "chalk";
 import type { Options as ExecaOptions } from "execa";
 import { execa } from "execa";
 import {
@@ -21,8 +21,10 @@ export const args = require("minimist")(process.argv.slice(2));
 
 export const isDryRun = !!args.dry;
 
+const chalk = new Chalk();
+
 if (isDryRun) {
-  console.log(colors.inverse(colors.yellow(" DRY RUN ")));
+  console.log(chalk.inverse(chalk.yellow(" DRY RUN ")));
   console.log();
 }
 export const accessFile = async (file: string) => {
@@ -76,7 +78,7 @@ export async function dryRun(
   opts?: ExecaOptions<any>
 ) {
   return console.log(
-    colors.blue(`[dryrun] ${bin} ${args.join(" ")}`),
+    chalk.blue(`[dryrun] ${bin} ${args.join(" ")}`),
     opts || ""
   );
 }
@@ -84,7 +86,7 @@ export async function dryRun(
 export const runIfNotDry = isDryRun ? dryRun : run;
 
 export function step(msg: string) {
-  return console.log(colors.cyan(msg));
+  return console.log(chalk.cyan(msg));
 }
 
 export function getVersionChoices(currentVersion: string) {
@@ -192,10 +194,10 @@ export async function logRecentCommits(pkgName: string, version: string) {
     stdio: "pipe",
   }).then((res) => res.stdout.trim());
   console.log(
-    colors.bold(
-      `\n${colors.blue("i")} Commits of ${colors.green(
+    chalk.bold(
+      `\n${chalk.blue("i")} Commits of ${chalk.green(
         pkgName
-      )} since ${colors.green(tag)} ${colors.gray(`(${sha.slice(0, 5)})`)}`
+      )} since ${chalk.green(tag)} ${chalk.gray(`(${sha.slice(0, 5)})`)}`
     )
   );
   await run(

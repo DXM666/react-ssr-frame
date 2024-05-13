@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "npx esno task/clean.ts --clean dist",
     "release": "npx esno task/release.ts",
-    "publish": "npx esno task/publishPkg.ts"
+    "publishPkg": "npx esno task/publishPkg.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.0",
