@@ -1,0 +1,41 @@
+{
+  "name": "@react-ssr-frame/compile",
+  "version": "1.0.0",
+  "description": "compile config for react ssr",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npx concurrently \"tsc -p ./tsconfig.cjs.json \" \" tsc -p ./tsconfig.esm.json\"",
+    "watch": "npx concurrently \"tsc -w -p ./tsconfig.cjs.json \" \"tsc -w -p ./tsconfig.esm.json \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DXM666/react-ssr-frame"
+  },
+  "keywords": [
+    "cli",
+    "ssr",
+    "react",
+    "webpack"
+  ],
+  "author": "DXM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DXM666/react-ssr-frame/issues"
+  },
+  "homepage": "https://github.com/DXM666/react-ssr-frame#readme",
+  "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.91.0",
+    "webpack-chain": "^6.5.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-manifest-plugin": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/webpack": "^4.41.38"
+  }
+}

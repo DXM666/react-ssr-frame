@@ -1,5 +1,5 @@
 {
-  "name": "react-ssr",
+  "name": "@react-ssr-frame/cli",
   "version": "1.0.1",
   "description": "react-ssr框架cli",
   "main": "dist/react-ssr-frame-cli.cjs",
@@ -33,6 +33,7 @@
     "@types/node": "^20.12.8",
     "@types/yargs": "^17.0.32",
     "concurrently": "^8.2.2",
+    "gulp": "^5.0.0",
     "rollup": "^4.17.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
