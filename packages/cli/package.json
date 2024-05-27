@@ -1,6 +1,6 @@
 {
   "name": "@react-ssr-frame/cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react-ssr框架cli",
   "main": "dist/react-ssr-frame-cli.cjs",
   "module": "dist/react-ssr-frame-cli.mjs",
@@ -30,7 +30,7 @@
   "author": "DXM",
   "license": "MIT",
   "dependencies": {
-    "@react-ssr-frame/compile": "^1.0.2",
+    "@react-ssr-frame/compile": "^1.0.3",
     "yargs": "^17.7.2",
     "gulp": "^5.0.0"
   },
