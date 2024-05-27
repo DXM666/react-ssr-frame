@@ -1,10 +1,10 @@
 {
-  "name": "react-ssr-frame-core",
+  "name": "@react-ssr-frame/core",
   "version": "1.0.0",
   "description": "react-ssr框架核心库",
-  "main": "dist/react-ssr-frame-core.cjs",
-  "module": "dist/react-ssr-frame-core.mjs",
-  "browser": "dist/react-ssr-frame-core.umd.js",
+  "main": "dist/core.cjs",
+  "module": "dist/core.mjs",
+  "browser": "dist/core.umd.js",
   "types": "./dist/index.d.ts",
   "files": [
     "src",
@@ -13,6 +13,9 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "core",

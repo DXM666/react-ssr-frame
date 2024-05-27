@@ -8,7 +8,7 @@ chain
   .add(resolve(process?.env?.APP_ROOT ?? __dirname, "./src/index.tsx"))
   .end();
 chain.output
-  .path(resolve(__dirname, "dist"))
+  .path(resolve(process?.env?.APP_ROOT ?? __dirname, "dist"))
   .publicPath("/")
   .filename("bundle.js")
   .end();

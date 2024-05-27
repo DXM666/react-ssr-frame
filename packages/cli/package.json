@@ -1,6 +1,6 @@
 {
   "name": "@react-ssr-frame/cli",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "react-ssr框架cli",
   "main": "dist/react-ssr-frame-cli.cjs",
   "module": "dist/react-ssr-frame-cli.mjs",
@@ -8,7 +8,8 @@
   "types": "./dist/index.d.ts",
   "files": [
     "src",
-    "dist"
+    "cjs",
+    "esm"
   ],
   "bin": {
     "react-ssr": "./cjs/cli.js"
@@ -16,6 +17,9 @@
   "scripts": {
     "build": "concurrently \"tsc -p ./tsconfig.cjs.json \" \" tsc -p ./tsconfig.esm.json\"",
     "watch": "concurrently \"tsc -w -p ./tsconfig.cjs.json \" \"tsc -w -p ./tsconfig.esm.json \""
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "core",
@@ -26,14 +30,15 @@
   "author": "DXM",
   "license": "MIT",
   "dependencies": {
-    "yargs": "^17.7.2"
+    "@react-ssr-frame/compile": "^1.0.2",
+    "yargs": "^17.7.2",
+    "gulp": "^5.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.12.8",
     "@types/yargs": "^17.0.32",
     "concurrently": "^8.2.2",
-    "gulp": "^5.0.0",
     "rollup": "^4.17.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",

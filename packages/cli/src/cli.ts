@@ -65,9 +65,7 @@ yargs
   })
   .fail((msg, err) => {
     if (err) {
-      console.log(err);
       process.exit(1);
     }
-    console.log(msg);
   })
   .parse();

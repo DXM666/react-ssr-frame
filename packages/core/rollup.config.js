@@ -7,18 +7,18 @@ export default {
   output: [
     {
       format: "cjs", // 打包为commonjs格式
-      file: "dist/react-ssr-frame-core.cjs", // 打包后的文件路径名称
-      name: "react-ssr-frame-core", // 打包后的默认导出文件名称
+      file: "dist/core.cjs", // 打包后的文件路径名称
+      name: "core", // 打包后的默认导出文件名称
     },
     {
       format: "esm", // 打包为esm格式
-      file: "dist/react-ssr-frame-core.mjs",
-      name: "react-ssr-frame-core",
+      file: "dist/core.mjs",
+      name: "core",
     },
     {
       format: "umd", // 打包为umd通用格式
-      file: "dist/react-ssr-frame-core.umd.js",
-      name: "react-ssr-frame-core",
+      file: "dist/core.umd.js",
+      name: "core",
       minifyInternalExports: true,
     },
   ],

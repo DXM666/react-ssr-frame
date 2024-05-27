@@ -21,10 +21,10 @@ const generateHtmlTemplate = (
   <div id="root">${renderToString(createElement(component))}</div>
   <script>
     window.__initial__ = ${JSON.stringify(initialState)};
-    ${Object.keys(assets).map((key: string) => {
-      return assets[key] ? `<script src="${assets[key]}"></script>` : "";
-    })}
   </script>
+  ${Object.keys(assets).map((key: string) => {
+    return assets[key] ? `<script src="${assets[key]}"></script>` : "";
+  })}
 </body>
 </html>
 `;
