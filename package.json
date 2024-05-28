@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "clean": "npx esno task/clean.ts --clean dist",
+    "clean": "npx esno task/clean.ts",
     "release": "npx esno task/release.ts",
     "publishPkg": "npx esno task/publishPkg.ts"
   },
-  "dependencies": {},
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@types/node": "^20.12.11",
     "@types/prompts": "^2.4.9",
@@ -18,6 +20,9 @@
     "conventional-changelog-cli": "^5.0.0",
     "esno": "^4.7.0",
     "execa": "^8.0.1",
+    "glob": "^10.4.1",
+    "lerna": "^8.1.3",
+    "minimist": "^1.2.8",
     "prompts": "^2.4.2",
     "semver": "^7.6.2",
     "shelljs": "^0.8.5",
