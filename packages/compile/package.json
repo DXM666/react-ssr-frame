@@ -42,7 +42,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
-    "@types/webpack": "^4.41.38"
+    "@types/webpack": "^4.41.38",
+    "concurrently": "^8.2.2"
   },
   "types": "./cjs/index.d.ts"
 }

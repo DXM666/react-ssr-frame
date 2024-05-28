@@ -12,7 +12,7 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "npx rollup -c"
   },
   "publishConfig": {
     "access": "public"

@@ -6,6 +6,8 @@
   "scripts": {
     "clean": "npx esno task/clean.ts",
     "release": "npx esno task/release.ts",
+    "clearModule": "lerna clean",
+    "buildPkg": "lerna exec -- yarn build",
     "publishPkg": "npx esno task/publishPkg.ts"
   },
   "workspaces": [

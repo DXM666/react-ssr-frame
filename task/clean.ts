@@ -6,7 +6,7 @@ const path = require("path");
 const foldersToDelete = ["dist", "esm", "cjs"];
 
 // 定义要搜索的目录
-const rootDir = path.resolve(__dirname); // 假设我们要搜索的是项目根目录
+const rootDir = path.resolve(__dirname, ".."); // 假设我们要搜索的是项目根目录
 
 let hasFlderNeedClear = false;
 
