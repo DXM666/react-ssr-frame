@@ -1,13 +1,13 @@
 import { Controller, Get, Res, UseInterceptors } from "@nestjs/common";
 
-import { App } from "../app";
+import { View } from "../index";
 import { ReactComponentInterceptor, Component } from "@react-ssr-frame/core";
 
 @Controller()
 @UseInterceptors(ReactComponentInterceptor)
 export class AppController {
   @Get("/home")
-  @Component(App)
+  @Component(View)
   findAll(@Res() res: any) {
      
     return null;
