@@ -1,5 +1,5 @@
 const path = require("path");
-const { spawn } = require("child_process");
+import { spawn, exec } from "child_process";
 const startClientBuild = (done: () => void) => {
   const tscProcess = spawn(
     "npx webpack",
@@ -29,4 +29,21 @@ const startClientBuild = (done: () => void) => {
   });
 };
 
-export { startClientBuild };
+const startClientRelease = (done: () => void) => {
+  exec(
+    "npx webpack --config ./webpackConfig.js",
+    {
+      cwd: path.resolve(__dirname),
+    },
+    (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+      done();
+    }
+  );
+};
+
+export { startClientBuild, startClientRelease };

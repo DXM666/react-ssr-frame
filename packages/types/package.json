@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/DXM666/react-ssr-frame"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "cli",
     "ssr",

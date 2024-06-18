@@ -8,6 +8,7 @@
     "build-client": "npx webpack",
     "build-server": "npx tsc --project ./tsconfig.server.json",
     "start": "react-ssr start",
+    "build": "react-ssr build",
     "old-start": "npx gulp"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "@nestjs/core": "^10.3.0",
     "@nestjs/platform-express": "^10.3.0",
     "@react-ssr-frame/cli": "^1.0.5",
+    "@react-ssr-frame/construct": "^1.0.0",
     "@react-ssr-frame/core": "^1.0.0",
     "install": "^0.13.0",
     "npm": "^10.8.0",

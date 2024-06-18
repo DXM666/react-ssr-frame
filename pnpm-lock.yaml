@@ -68,6 +68,9 @@ importers:
       '@react-ssr-frame/cli':
         specifier: ^1.0.5
         version: 1.0.5
+      '@react-ssr-frame/construct':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@react-ssr-frame/core':
         specifier: ^1.0.0
         version: 1.0.0(@nestjs/platform-express@10.3.8(@nestjs/common@10.3.8(class-transformer@0.5.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8))(class-transformer@0.5.1)(encoding@0.1.13)
@@ -95,7 +98,7 @@ importers:
         version: 17.0.25
       nodemon:
         specifier: ^3.1.0
-        version: 3.1.2
+        version: 3.1.3
       typescript:
         specifier: ^5.3.3
         version: 5.4.5
@@ -105,6 +108,9 @@ importers:
       '@react-ssr-frame/compile':
         specifier: ^1.0.3
         version: 1.0.3
+      '@react-ssr-frame/types':
+        specifier: ^1.0.0
+        version: 1.0.0
       gulp:
         specifier: ^5.0.0
         version: 5.0.0
@@ -1767,8 +1773,15 @@ packages:
   '@react-ssr-frame/compile@1.0.3':
     resolution: {integrity: sha512-1fLj3GCGB0U2MIBePg6ccS1Kro+7bw/xqZ9tNpQbAY4TZxv3+tI3EbvQArWxLtTvUETW9SYJzdadEVV2k1wBsA==}
 
+  '@react-ssr-frame/construct@1.0.0':
+    resolution: {integrity: sha512-Qjpdn3ZHvx9F8TKzpUDB3ki0Qk/TUfU4cLIXdFNt+YsIcHJ75seFAZXZXuVZvBkgVR0LtaPUG4UFFu026IaNdA==}
+    engines: {node: '>=14.17.0'}
+
   '@react-ssr-frame/core@1.0.0':
     resolution: {integrity: sha512-vwIA0ZITUAuqmFw1i4VwK0Aw9jJsWgJV9pumBOmvZjKArM3lxqJFT1jtnab08+VgLb4kTgNb5gyVPSIcJtcprQ==}
+
+  '@react-ssr-frame/types@1.0.0':
+    resolution: {integrity: sha512-JJ1bqRLYF9vfBcBBwT6qfTZweiLFE789OajTDt3dtxnp6JnNcof6qqyzMMXRMAQ9kVlZyKWUUymaG21btsNBlg==}
 
   '@rollup/plugin-babel@5.3.1':
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -4959,8 +4972,8 @@ packages:
   node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
 
-  nodemon@3.1.2:
-    resolution: {integrity: sha512-/Ib/kloefDy+N0iRTxIUzyGcdW9lzlnca2Jsa5w73bs3npXjg+WInmiX6VY13mIb6SykkthYX/U5t0ukryGqBw==}
+  nodemon@3.1.3:
+    resolution: {integrity: sha512-m4Vqs+APdKzDFpuaL9F9EVOF85+h070FnkHVEoU4+rmT6Vw0bmNl7s61VEkY/cJkL7RCv1p4urnUDUMrS5rk2w==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -8802,6 +8815,11 @@ snapshots:
       - webpack-bundle-analyzer
       - webpack-dev-server
 
+  '@react-ssr-frame/construct@1.0.0':
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+
   '@react-ssr-frame/core@1.0.0(@nestjs/platform-express@10.3.8(@nestjs/common@10.3.8(class-transformer@0.5.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8))(class-transformer@0.5.1)(encoding@0.1.13)':
     dependencies:
       '@nestjs/common': 10.3.8(class-transformer@0.5.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
@@ -8817,6 +8835,8 @@ snapshots:
       - class-transformer
       - class-validator
       - encoding
+
+  '@react-ssr-frame/types@1.0.0': {}
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.24.6)(@types/babel__core@7.20.5)(rollup@4.18.0)':
     dependencies:
@@ -12398,7 +12418,7 @@ snapshots:
 
   node-releases@2.0.14: {}
 
-  nodemon@3.1.2:
+  nodemon@3.1.3:
     dependencies:
       chokidar: 3.6.0
       debug: 4.3.4(supports-color@5.5.0)
