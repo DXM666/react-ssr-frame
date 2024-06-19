@@ -2,8 +2,8 @@
 import * as yargs from "yargs";
 import { spawn } from "child_process";
 // import * as path from "path";
-const path = require('path');
-
+const path = require("path");
+const gulpPath = path.join(__dirname, "../node_modules", ".bin", "gulp");
 yargs
   .command(
     "start",
@@ -17,7 +17,7 @@ yargs
       }),
     async (argv) => {
       process.env.APP_ROOT = process.cwd();
-      const gulpPath = path.join(__dirname, '../node_modules', '.bin', 'gulp');
+
       const gulpProcess = spawn(
         gulpPath,
         ["start", "--gulpfile", "./gulpfile.js"],
@@ -55,7 +55,7 @@ yargs
     async (argv) => {
       process.env.APP_ROOT = process.cwd();
       const gulpProcess = spawn(
-        "npx gulp",
+        gulpPath,
         ["build", " --gulpfile", "./gulpfile.js"],
         {
           stdio: "inherit", // 这将使子进程的stdio继承自父进程，这样您可以在控制台中看到输出

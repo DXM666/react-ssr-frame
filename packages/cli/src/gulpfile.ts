@@ -94,6 +94,9 @@ gulp.task("buildTs", (done: Function) => {
   } else if (taskArgs.env == "prod") {
     exec(
       "npx tsc --project ./tsconfig.server.json",
+      {
+        cwd: process.env.APP_ROOT,
+      },
       (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);

@@ -66,11 +66,11 @@ importers:
         specifier: ^10.3.0
         version: 10.3.8(@nestjs/common@10.3.8(class-transformer@0.5.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8)
       '@react-ssr-frame/cli':
-        specifier: ^1.0.5
-        version: 1.0.5
+        specifier: ^1.0.6
+        version: 1.0.6
       '@react-ssr-frame/construct':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       '@react-ssr-frame/core':
         specifier: ^1.0.0
         version: 1.0.0(@nestjs/platform-express@10.3.8(@nestjs/common@10.3.8(class-transformer@0.5.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8))(class-transformer@0.5.1)(encoding@0.1.13)
@@ -106,11 +106,11 @@ importers:
   packages/cli:
     dependencies:
       '@react-ssr-frame/compile':
+        specifier: ^1.0.5
+        version: 1.0.5
+      '@react-ssr-frame/types':
         specifier: ^1.0.3
         version: 1.0.3
-      '@react-ssr-frame/types':
-        specifier: ^1.0.0
-        version: 1.0.0
       gulp:
         specifier: ^5.0.0
         version: 5.0.0
@@ -1766,22 +1766,22 @@ packages:
       webpack-plugin-serve:
         optional: true
 
-  '@react-ssr-frame/cli@1.0.5':
-    resolution: {integrity: sha512-nJlQtm9zyzADOgSNrNIEo6qGin8l8e3ZYM8cHEqpPm9xRBlOF7ljiEqOOtPGvfA7RCQseetY8ltEesHtXGUUZA==}
+  '@react-ssr-frame/cli@1.0.6':
+    resolution: {integrity: sha512-VW/Bns+cCJLbiPb3E6d1d36TWh4H5Idcy8wZ4trKvsi2WCQ+4VidjlFY1khQfb9byQxbvnuxRKFFl+h68XbNVA==}
     hasBin: true
 
-  '@react-ssr-frame/compile@1.0.3':
-    resolution: {integrity: sha512-1fLj3GCGB0U2MIBePg6ccS1Kro+7bw/xqZ9tNpQbAY4TZxv3+tI3EbvQArWxLtTvUETW9SYJzdadEVV2k1wBsA==}
+  '@react-ssr-frame/compile@1.0.5':
+    resolution: {integrity: sha512-SiB2BwKQV2xKtInRDVAj8pPqz56rRVBtHe9U4jmJYFJpabqWsMleOYti9K4C3DRK/B5OVCUK25vYI3XpewD4Qw==}
 
-  '@react-ssr-frame/construct@1.0.0':
-    resolution: {integrity: sha512-Qjpdn3ZHvx9F8TKzpUDB3ki0Qk/TUfU4cLIXdFNt+YsIcHJ75seFAZXZXuVZvBkgVR0LtaPUG4UFFu026IaNdA==}
+  '@react-ssr-frame/construct@1.0.1':
+    resolution: {integrity: sha512-tCGjnKz9bbj7Ok/nc7rAhIz4uHhZmPT+4zYYdMvfjINZEsxeZJq2ON62emHxKc0vQAOUHFUPBJhIqtsTTV291g==}
     engines: {node: '>=14.17.0'}
 
   '@react-ssr-frame/core@1.0.0':
     resolution: {integrity: sha512-vwIA0ZITUAuqmFw1i4VwK0Aw9jJsWgJV9pumBOmvZjKArM3lxqJFT1jtnab08+VgLb4kTgNb5gyVPSIcJtcprQ==}
 
-  '@react-ssr-frame/types@1.0.0':
-    resolution: {integrity: sha512-JJ1bqRLYF9vfBcBBwT6qfTZweiLFE789OajTDt3dtxnp6JnNcof6qqyzMMXRMAQ9kVlZyKWUUymaG21btsNBlg==}
+  '@react-ssr-frame/types@1.0.3':
+    resolution: {integrity: sha512-/LxQ+pHV9M8fM3gqIV5bLyeote7BH0/8FhhFZtEnz7gCBd7+XeDXYvGMtDCgd/em5VT7WxxaT860+HBnVRF2MA==}
 
   '@rollup/plugin-babel@5.3.1':
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -8780,9 +8780,10 @@ snapshots:
       sockjs-client: 1.6.1
       type-fest: 4.18.3
 
-  '@react-ssr-frame/cli@1.0.5':
+  '@react-ssr-frame/cli@1.0.6':
     dependencies:
-      '@react-ssr-frame/compile': 1.0.3
+      '@react-ssr-frame/compile': 1.0.5
+      '@react-ssr-frame/types': 1.0.3
       gulp: 5.0.0
       yargs: 17.7.2
     transitivePeerDependencies:
@@ -8794,7 +8795,7 @@ snapshots:
       - webpack-bundle-analyzer
       - webpack-dev-server
 
-  '@react-ssr-frame/compile@1.0.3':
+  '@react-ssr-frame/compile@1.0.5':
     dependencies:
       '@babel/core': 7.24.6
       '@babel/preset-env': 7.24.6(@babel/core@7.24.6)
@@ -8815,7 +8816,7 @@ snapshots:
       - webpack-bundle-analyzer
       - webpack-dev-server
 
-  '@react-ssr-frame/construct@1.0.0':
+  '@react-ssr-frame/construct@1.0.1':
     dependencies:
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
@@ -8836,7 +8837,7 @@ snapshots:
       - class-validator
       - encoding
 
-  '@react-ssr-frame/types@1.0.0': {}
+  '@react-ssr-frame/types@1.0.3': {}
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.24.6)(@types/babel__core@7.20.5)(rollup@4.18.0)':
     dependencies:

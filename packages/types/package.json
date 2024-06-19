@@ -1,9 +1,14 @@
 {
   "name": "@react-ssr-frame/types",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "types for ssr",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
+  "files": [
+    "src",
+    "cjs",
+    "esm"
+  ],
   "scripts": {
     "build": "concurrently \"npx tsc -p ./tsconfig.cjs.json \" \" npx tsc -p ./tsconfig.esm.json\"",
     "watch": "concurrently \"npx tsc -w -p ./tsconfig.cjs.json \" \"npx tsc -w -p ./tsconfig.esm.json \""
