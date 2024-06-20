@@ -7,11 +7,16 @@ WORKDIR /app
 # copy dir
 COPY . .
 
+# set env variables
+ENV PATH /app/node_modules/.bin:$PATH
+
+RUN npm install -g pnpm
+
 # Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm install \
-    && npm run build
+RUN pnpm install \
+    && pnpm run build
 
 # expose port
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["node", "dist/server.js"]
