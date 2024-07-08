@@ -11,6 +11,7 @@
 <div align="center">
 <a href="https://github.com/DXM666/react-ssr-frame" target="_blank"><img src="https://img.shields.io/badge/node-%3E=14-green.svg?color=4dc71f" alt="Node" ></a>
  <a href="https://github.com/DXM666/react-ssr-frame" target="_blank"><img src="https://img.shields.io/badge/react-=17-green.svg?color=4dc71f" alt="React" ></a>
+</div>
 <br />
 
 `react-ssr-frame` frame is an out-of-the-box server-side rendering framework for front-end frames in server-side rendered scenes.
