@@ -2,19 +2,15 @@
 import * as yargs from "yargs";
 import { spawn } from "child_process";
 // import * as path from "path";
+
 const path = require("path");
 const gulpPath = path.join(__dirname, "../node_modules", ".bin", "gulp");
+
+
 yargs
   .command(
     "start",
     "Start Server",
-    (yargs) =>
-      yargs.options({
-        bundleConfig: {
-          alias: "bc",
-          desc: "bundle config.ts dependencies module by esbuild",
-        },
-      }),
     async (argv) => {
       process.env.APP_ROOT = process.cwd();
 
@@ -44,14 +40,7 @@ yargs
   )
   .command(
     "build",
-    "Build application by webpack or vite",
-    (yargs) =>
-      yargs.options({
-        bundleConfig: {
-          alias: "bc",
-          desc: "bundle config.ts dependencies module by esbuild",
-        },
-      }),
+    "Build application by webpack",
     async (argv) => {
       process.env.APP_ROOT = process.cwd();
       const gulpProcess = spawn(

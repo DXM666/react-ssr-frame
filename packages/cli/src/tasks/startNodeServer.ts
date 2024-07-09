@@ -1,0 +1,25 @@
+// const gulp = require("gulp");
+import { spawn } from "child_process";
+
+// 启动Node服务任务
+export default (done: Function) => {
+  const tscProcess = spawn("cmd.exe", ["/k", "start", "npx nodemon"], {
+    cwd: process.env.APP_ROOT, // 这里设置子进程的工作目录,
+    stdio: "inherit", // 这将使子进程的stdio继承自父进程，这样您可以在控制台中看到输出
+    shell: true, // 在某些系统中，可能需要启用shell来正确地解析命令和参数
+  });
+
+  // 监听子进程的错误和退出事件
+  tscProcess.on("error", (err: Error) => {
+    console.error("nodemon进程发生错误:", err);
+  });
+
+  tscProcess.on("exit", (code: string, signal: string) => {
+    if (code !== null) {
+      console.log(`nodemon进程退出, 退出码 ${code}`);
+    } else {
+      console.log(`nodemon进程被信号 ${signal} 杀死`);
+    }
+  });
+  done();
+}
