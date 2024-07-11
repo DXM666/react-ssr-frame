@@ -83,6 +83,7 @@ cypress/screenshots
 cypress/videos
 
 packages/**/README.md
+packages/**/.nx
 
 **/run
 
