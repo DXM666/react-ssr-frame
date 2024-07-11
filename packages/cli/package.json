@@ -1,6 +1,6 @@
 {
   "name": "@react-ssr-frame/cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react-ssr框架cli",
   "main": "dist/react-ssr-frame-cli.cjs",
   "module": "dist/react-ssr-frame-cli.mjs",
