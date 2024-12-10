@@ -1,54 +1,26 @@
 {
   "name": "@react-ssr-frame/compile",
-  "version": "1.0.6",
-  "description": "compile config for react ssr",
-  "main": "./cjs/index.js",
-  "module": "./esm/index.js",
-  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "react-ssr框架编译工具",
+  "main": "dist/compile.cjs",
+  "module": "dist/compile.mjs",
+  "browser": "dist/compile.umd.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "src",
-    "cjs",
-    "esm"
+    "dist"
   ],
+  "type": "module",
   "scripts": {
-    "build": "npx concurrently \"npx tsc -p ./tsconfig.cjs.json \" \" npx tsc -p ./tsconfig.esm.json\"",
-    "watch": "npx concurrently \"npx tsc -w -p ./tsconfig.cjs.json \" \"npx tsc -w -p ./tsconfig.esm.json \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DXM666/react-ssr-frame.git"
+    "build": "npx rollup -c"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "cli",
-    "ssr",
-    "react",
-    "webpack"
+    "compile",
+    "react-ssr"
   ],
   "author": "DXM",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DXM666/react-ssr-frame/issues"
-  },
-  "homepage": "https://github.com/DXM666/react-ssr-frame#readme",
-  "dependencies": {
-    "@babel/core": "^7.24.5",
-    "@babel/preset-env": "^7.24.5",
-    "@babel/preset-react": "^7.24.1",
-    "babel-loader": "^9.1.3",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.4.5",
-    "webpack": "^5.91.0",
-    "webpack-chain": "^6.5.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-manifest-plugin": "^5.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.12.12",
-    "@types/webpack": "^4.41.38",
-    "concurrently": "^8.2.2"
-  },
-  "types": "./cjs/index.d.ts"
+  "license": "MIT"
 }

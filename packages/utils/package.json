@@ -1,42 +1,26 @@
 {
   "name": "@react-ssr-frame/utils",
   "version": "1.0.0",
-  "description": "utils for ssr",
-  "main": "./cjs/index.js",
-  "module": "./esm/index.js",
-  "sideEffects": false,
+  "description": "react-ssr框架工具库",
+  "main": "dist/utils.cjs",
+  "module": "dist/utils.mjs",
+  "browser": "dist/utils.umd.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "src",
-    "cjs",
-    "esm"
+    "dist"
   ],
+  "type": "module",
+  "scripts": {
+    "build": "npx rollup -c"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "build": "concurrently \"tsc -p ./tsconfig.cjs.json \" \" tsc -p ./tsconfig.esm.json\"",
-    "watch": "concurrently \"tsc -w -p ./tsconfig.cjs.json \" \"tsc -w -p ./tsconfig.esm.json \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DXM666/react-ssr-frame"
-  },
   "keywords": [
-    "cli",
-    "ssr",
-    "react"
+    "utils",
+    "react-ssr"
   ],
   "author": "DXM",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DXM666/react-ssr-frame/issues"
-  },
-  "engines": {
-    "node": ">=14.17.0"
-  },
-  "homepage": "https://github.com/DXM666/react-ssr-frame#readme",
-  "dependencies": {
-    "@react-ssr-frame/types": "^1.0.3",
-    "concurrently": "^8.2.2"
-  }
+  "license": "MIT"
 }

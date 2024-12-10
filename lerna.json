@@ -4,5 +4,8 @@
   "packages": [
     "packages/*"
   ],
+  "ignore": [
+    "example/*"
+  ],
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }

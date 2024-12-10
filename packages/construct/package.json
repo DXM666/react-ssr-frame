@@ -1,33 +1,32 @@
 {
   "name": "@react-ssr-frame/construct",
-  "version": "1.0.1",
-  "description": "construct method for ssr",
-  "main": "./cjs/index.js",
-  "module": "./esm/index.js",
-  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "react-ssr框架构建工具",
+  "main": "dist/construct.cjs",
+  "module": "dist/construct.mjs",
+  "browser": "dist/construct.umd.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "src",
-    "cjs",
-    "esm"
+    "dist"
   ],
+  "type": "module",
   "scripts": {
-    "build": "npx concurrently \"npx tsc -p ./tsconfig.cjs.json \" \" npx tsc -p ./tsconfig.esm.json\"",
-    "watch": "npx concurrently \"npx tsc -w -p ./tsconfig.cjs.json \" \"npx tsc -w -p ./tsconfig.esm.json \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DXM666/react-ssr-frame"
+    "build": "npx rollup -c"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "cli",
-    "ssr",
-    "react"
+    "construct",
+    "react-ssr"
   ],
   "author": "DXM",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DXM666/react-ssr-frame"
+  },
   "bugs": {
     "url": "https://github.com/DXM666/react-ssr-frame/issues"
   },

@@ -1,19 +1,20 @@
 {
   "name": "react-ssr-frame",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "clean": "npx esno task/clean.ts",
     "release": "npx esno task/release.ts",
     "clearModule": "lerna clean",
-    "buildPkg": "lerna exec -- yarn build",
+    "buildPkg": "rollup -c rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
     "publishPkg": "npx esno task/publishPkg.ts"
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "type": "module",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.12.11",
     "@types/prompts": "^2.4.9",
     "@types/semver": "^7.5.8",
@@ -25,12 +26,13 @@
     "glob": "^10.4.1",
     "minimist": "^1.2.8",
     "prompts": "^2.4.2",
+    "rollup": "^4.9.6",
     "semver": "^7.6.2",
     "shelljs": "^0.8.5",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "nx": "^19.4.2",
-    "lerna": "^8.1.3"
+    "lerna": "^8.1.3",
+    "nx": "^19.4.2"
   }
 }

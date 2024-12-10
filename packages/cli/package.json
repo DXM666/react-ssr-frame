@@ -1,31 +1,29 @@
 {
   "name": "@react-ssr-frame/cli",
-  "version": "1.0.6",
-  "description": "react-ssr框架cli",
-  "main": "dist/react-ssr-frame-cli.cjs",
-  "module": "dist/react-ssr-frame-cli.mjs",
-  "browser": "dist/react-ssr-frame-cli.umd.js",
+  "version": "1.0.0",
+  "description": "react-ssr框架cli工具",
+  "main": "dist/cli.cjs",
+  "module": "dist/cli.mjs",
+  "browser": "dist/cli.umd.js",
   "types": "./dist/index.d.ts",
   "files": [
     "src",
-    "cjs",
-    "esm"
+    "dist"
   ],
+  "type": "module",
   "bin": {
     "react-ssr": "./cjs/cli.js"
   },
   "scripts": {
-    "build": "npx concurrently \"tsc -p ./tsconfig.cjs.json \" \" tsc -p ./tsconfig.esm.json\"",
+    "build": "npx rollup -c",
     "watch": "npx concurrently \"tsc -w -p ./tsconfig.cjs.json \" \"tsc -w -p ./tsconfig.esm.json \""
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "core",
-    "react-ssr",
-    "react",
-    "ssr"
+    "cli",
+    "react-ssr"
   ],
   "author": "DXM",
   "license": "MIT",
