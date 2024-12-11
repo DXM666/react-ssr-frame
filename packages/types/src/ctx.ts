@@ -37,13 +37,14 @@ export interface Options {
 }
 export interface IWindow {
   __USE_SSR__?: boolean
-  __INITIAL_DATA__?: any
-  __INITIAL_PINIA_DATA__?: any
-  STORE_CONTEXT?: any
+  __INITIAL_DATA__?: Record<string, unknown>
+  __INITIAL_STATE__?: Record<string, unknown>
+  __REDUX_DEVTOOLS_EXTENSION__?: unknown
+  STORE_CONTEXT?: Record<string, unknown>
   __USE_VITE__?: boolean
   prefix?: string
   clientPrefix?: string
-  microApp?: any
+  microApp?: Record<string, unknown>
   hashRouter: boolean
   ssrDevInfo: {
     manifest: Record<string, string>

@@ -1,5 +1,5 @@
-import { from, of } from "rxjs";
-import { switchMap, map, tap } from "rxjs/operators";
+import { from } from "rxjs";
+import { map } from "rxjs/operators";
 import fs from "fs";
 import path, { resolve } from "path";
 import { FC, createElement } from "react";

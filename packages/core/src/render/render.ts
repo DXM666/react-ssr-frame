@@ -1,5 +1,4 @@
-import { renderToString } from "react-dom/server";
-import { FC, createElement } from "react";
+import { FC } from "react";
 import { of, switchMap, map, tap } from "rxjs";
 import { generateHtmlTemplate, readManifest } from "./buildHtml";
 import { ExecutionContext } from "@nestjs/common";

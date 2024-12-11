@@ -12,7 +12,7 @@ declare namespace reactSSRCore {
    * ssr渲染拦截器
    */
   export declare class ReactComponentInterceptor implements NestInterceptor {
-    intercept(context: ExecutionContext, next: CallHandler): Observable<any>;
+    intercept(context: ExecutionContext, next: CallHandler): Observable;
   }
 }
 declare module "reac-ssr-core" {

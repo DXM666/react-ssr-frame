@@ -9,7 +9,7 @@ import { render } from "../render";
 
 @Injectable()
 export class ReactComponentInterceptor implements NestInterceptor {
-  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<unknown> {
     // 获取当前执行的方法
     const handler = context.getHandler();
 

@@ -16,7 +16,7 @@ const startClientBuild = (done: () => void) => {
     console.error("webpack进程发生错误:", err);
   });
 
-  tscProcess.on("exit", (code: any, signal: any) => {
+  tscProcess.on("exit", (code, signal) => {
     if (code !== null) {
       console.log(`webpack进程退出, 退出码 ${code}`);
     } else {

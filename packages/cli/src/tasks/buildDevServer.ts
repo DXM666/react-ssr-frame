@@ -4,7 +4,7 @@ import { spawn } from "child_process";
 
 // 注册编译任务
 export default (done: Function) => {
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     const tscProcess = spawn(
       "cmd.exe",
       [
