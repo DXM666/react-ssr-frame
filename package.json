@@ -10,8 +10,8 @@
     "clearModule": "lerna clean",
     "buildPkg": "rollup -c rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
     "publishPkg": "npx esno task/publishPkg.ts",
-    "lint": "eslint --flag unstable_ts_config",
-    "lint:fix": "eslint --flag unstable_ts_config --fix"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "type": "module",
   "devDependencies": {

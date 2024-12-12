@@ -18,5 +18,17 @@
       "./@types",
       "./node_modules/@types"
     ]
-  }
+  },
+  "include": [
+    "packages/**/*",
+    "@types/**/*",
+    "task/**/*",
+    "example/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.spec.ts"
+  ]
 }

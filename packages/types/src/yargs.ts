@@ -1,4 +1,3 @@
-
 import type { Arguments } from 'yargs'
 
 export type Argv = Arguments<{

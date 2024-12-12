@@ -66,8 +66,8 @@ export interface IConfig {
         /*! The following options  options only take effect in webpack */
         additionalData?: string| Function
         sourceMap?: boolean
-        webpackImporter?: Boolean
-        implementation?: Object
+        webpackImporter?: boolean
+        implementation?: object
       }
       sass?: any /*! only webpack */
       scss?: any /*! only vite */
@@ -98,7 +98,7 @@ export interface IConfig {
   ssrVueLoaderOptions?: any
   csrVueLoaderOptions?: any
   corejs?: boolean
-  corejsOptions?: Object
+  corejsOptions?: object
   https: boolean | object
   babelExtraModule?: RegExp[]
   routerPriority?: Record<string, number>

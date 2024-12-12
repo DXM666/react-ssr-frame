@@ -14,12 +14,10 @@ interface IWindow {
 
 declare global {
   interface Window extends IWindow {}
-  var __non_webpack_require__: NodeRequire
-  var __VUE_PROD_DEVTOOLS__: boolean
-  var __isBrowser__: Boolean
+  let __non_webpack_require__: NodeRequire
+  let __VUE_PROD_DEVTOOLS__: boolean
+  let __isBrowser__: boolean
 }
-
-
 
 declare module '*.less'
 
